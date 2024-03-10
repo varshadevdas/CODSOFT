@@ -35,10 +35,10 @@ public class ATMInterface {
 
         System.out.println("------Welcome To Your Bank Account------");
 
-        char choice = 'y'; // Use a character to track user's choice
+        char choice = 'y'; 
         ATMInterface bankAccount = new ATMInterface();
 
-        while (choice == 'y' || choice == 'Y') { // Loop continues as long as user chooses 'y' or 'Y'
+        while (choice == 'y' || choice == 'Y') { 
             System.out.println("\nWhat would you like to do?");
             System.out.println("1. Check Current Balance");
             System.out.println("2. Deposit Amount");
@@ -58,16 +58,15 @@ public class ATMInterface {
                     bankAccount.withdraw();
                     break;
                 case 4:
-                    choice = 'n'; // Set choice to 'n' to exit the loop
+                    choice = 'n';
                     System.out.println("Thank you for using your Bank Account.");
                     break;
                 default:
                     System.out.println("Invalid choice.");
             }
 
-            // Ask if user wants to continue
             System.out.println("\nDo you want to perform another transaction? (y/n)");
-            choice = scanner.next().charAt(0); // Read only the first character (case-insensitive)
+            choice = scanner.next().charAt(0); 
         }
 
         scanner.close();

@@ -7,13 +7,13 @@ public class GradeCalculator {
 
         System.out.println("Enter Student Details:");
 
-        int rollNo; // Declare variables without initialization
+        int rollNo; 
         String name;
         int mark1, mark2, mark3, mark4, mark5, mark6;
 
         System.out.print("Roll No: ");
         rollNo = scanner.nextInt();
-        scanner.nextLine(); // Consume the newline character
+        scanner.nextLine(); 
 
         System.out.print("Name: ");
         name = scanner.nextLine();
@@ -36,16 +36,16 @@ public class GradeCalculator {
         mark5 = scanner.nextInt();
 
         System.out.print("SS : ");
-        mark6 = scanner.nextInt(); // Handle optional subject gracefully
+        mark6 = scanner.nextInt();
 
-        int totalMarks = mark1 + mark2 + mark3 + mark4 + mark5 + mark6; // Consider optional subject
-        double percentage = (double) totalMarks / 600 * 100; // Calculate percentage (out of 100)
+        int totalMarks = mark1 + mark2 + mark3 + mark4 + mark5 + mark6; 
+        double percentage = (double) totalMarks / 600 * 100; 
 
         System.out.println("\nGrade Report:");
         System.out.println("Roll No: " + rollNo);
         System.out.println("Name: " + name);
         System.out.println("Total Marks: " + totalMarks);
-        System.out.println("Percentage: " + String.format("%.2f", percentage) + "%"); // Format percentage with two decimal places
+        System.out.println("Percentage: " + String.format("%.2f", percentage) + "%"); 
 
         String grade;
         if (percentage >= 90) {
@@ -64,6 +64,6 @@ public class GradeCalculator {
 
         System.out.println("Grade: " + grade);
 
-        scanner.close(); // Close Scanner to avoid resource leaks
+        scanner.close(); 
     }
 }
